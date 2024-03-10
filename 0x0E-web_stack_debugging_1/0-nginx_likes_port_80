@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# Set nginx server to  listne to port 80
+
+# remove the default Nginx config file
+rm /etc/nginx/sites-enabled/default
+# config Nginx to listen to port 80 for all active IPv4 IPs
+ln -s /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
+# restart
+service nginx restart
