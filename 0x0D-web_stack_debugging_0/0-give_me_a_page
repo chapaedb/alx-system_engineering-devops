@@ -1,11 +1,4 @@
 #!/usr/bin/env bash
-# Configures an Nginx server to listen on port 80.
-
-# Remove the default Nginx configuration file
-rm /etc/nginx/sites-enabled/default
-
-# Create a symbolic link for the default configuration
-ln -sf /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
-
-# Restart the Nginx service
-service nginx restart
+# Start Apache so as to return a
+# page conatining Hello Holberton
+service apache2 start
