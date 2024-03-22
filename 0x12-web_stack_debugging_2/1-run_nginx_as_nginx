@@ -4,7 +4,7 @@
 service apache2 stop
 
 # Change the user in the nginx.conf file
-sed -i 's/user www-data/user nginx/' /etc/nginx/nginx.conf
+sed -i 's/user www-data;/user nginx;/' /etc/nginx/nginx.conf
 
 # Update the default site configuration to listen on port 8080
 sed -i 's/listen 80;/listen 8080;/' /etc/nginx/sites-available/default
