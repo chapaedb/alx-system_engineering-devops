@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """
 Script that retrieves information about a user's TODO list progress
-from a REST API using their employee ID
+from a REST API using their employee ID.
 """
 
 import json
@@ -20,7 +20,7 @@ if __name__ == "__main__":
     user_response = session.get(user_url)
 
     todos_data = employee_response.json()
-    user_name = user_response.json()['name']
+    user_name = user_response.json()[0]['name']
 
     total_tasks = 0
 
@@ -32,4 +32,4 @@ if __name__ == "__main__":
 
     for task in todos_data:
         if task['completed']:
-            print("\t" + task.get('title'))
+            print("\t" + task['title'])
