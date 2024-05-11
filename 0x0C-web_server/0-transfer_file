@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
-# Transfer a file from our client to a server
+# Transfers a file from our client to a server
 #
-# vars
+# variables
 if [ $# -lt 4 ]
 then
   echo "Usage: 0-transfer_file PATH_TO_FILE IP USERNAME PATH_TO_SSH_KEY"
